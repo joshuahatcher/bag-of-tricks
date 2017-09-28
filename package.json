@@ -1,0 +1,19 @@
+{
+  "name": "bag-of-tricks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github-personal:joshuahatcher/bag-of-tricks.git"
+  },
+  "author": "Joshua Hatcher",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^3.5.6",
+    "webpack-dev-server": "^2.8.2"
+  }
+}
