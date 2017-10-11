@@ -3,8 +3,8 @@ import Footer from './components/footer';
 
 const dateString = new Date().toUTCString().split(' ').slice(0, 4).join(' ');
 
-const header = Header.render({ title: 'Hello! This is a header' });
-const footer = Footer.render({
+const header = Header({ title: 'Hello! This is a header' });
+const footer = Footer({
   date: dateString,
   name: 'Joshua Hatcher'
 });

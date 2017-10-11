@@ -1,5 +1,3 @@
-export default {
-  render(context) {
-    return `<header>${context.title}</header>`
-  }
-}
+const Header = (context) => `<header>${context.title}</header>`;
+
+export default Header;

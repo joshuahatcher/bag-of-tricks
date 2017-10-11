@@ -1,5 +1,5 @@
-export default {
-  render(context) {
-    return `<footer>Copyright ${context.date}, ${context.name}</footer>`
-  }
-}
+const Footer = (context) => (
+  `<footer>Copyright ${context.date}, ${context.name}</footer>`
+);
+
+export default Footer;
