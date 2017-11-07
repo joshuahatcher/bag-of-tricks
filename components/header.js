@@ -1,3 +1,3 @@
-const Header = (context) => `<header>${context.title} SUBMODULE CHANGE!!!</header>`;
+const Header = (context) => `<header>${context.title}</header>`;
 
 export default Header;
