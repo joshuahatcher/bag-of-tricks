@@ -1,11 +1,16 @@
-import Footer from './components/testfooter';
-
+const componentPath = './bag-of-tricks/components/';
 const components = [
-  Footer
+  'footer'
 ];
 
 function renderComponents(components) {
-  components.forEach(c => c.render());
+  if (!window.$) {
+    return;
+  }
+
+  components.forEach(name => {
+    $(`#${name}`).load(`${componentPath}${name}.html`);
+  });
 }
 
 renderComponents(components);
