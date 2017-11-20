@@ -70,17 +70,16 @@
 "use strict";
 
 
-var _testfooter = __webpack_require__(1);
-
-var _testfooter2 = _interopRequireDefault(_testfooter);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var components = [_testfooter2.default];
+var componentPath = './bag-of-tricks/components/';
+var components = ['footer'];
 
 function renderComponents(components) {
-  components.forEach(function (c) {
-    return c.render();
+  if (!window.$) {
+    return;
+  }
+
+  components.forEach(function (name) {
+    $('#' + name).load('' + componentPath + name + '.html');
   });
 }
 
@@ -101,35 +100,6 @@ renderComponents(components);
 //   header,
 //   footer
 // }
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var footer = {
-  name: 'footer',
-  render: function render() {
-    var el = void 0;
-
-    if (!window.$) {
-      return;
-    }
-
-    el = $('#footer');
-
-    if (window.$ && el.length) {
-      el.load('./footer.html');
-    }
-  }
-};
-
-exports.default = footer;
 
 /***/ })
 /******/ ]);
