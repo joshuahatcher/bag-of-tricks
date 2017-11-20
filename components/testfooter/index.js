@@ -1,11 +1,15 @@
-import $ from 'jquery';
-
 const footer = {
   name: 'footer',
   render: function() {
-    const el = $('#footer');
+    let el;
 
-    if (el.length) {
+    if (!window.$) {
+      return;
+    }
+
+    el = $('#footer');
+
+    if (window.$ && el.length) {
       el.load('./footer.html');
     }
   }
