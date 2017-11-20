@@ -15,7 +15,7 @@ function renderComponents(components) {
 
     stylesheet.rel = 'text/stylesheet';
     stylesheet.href = componentPath + name + '/style.css';
-    document.body.appendChild(stylesheet);
+    $('body').prepend(stylesheet);
 
     $('#' + name).load(componentPath + name + '/index.html');
   });
