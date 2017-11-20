@@ -1,6 +1,6 @@
 // "Raw" option provides an as-is script for importing components without using a build process.
 
-var componentPath = './bag-of-tricks/components/';
+var componentPath = './bag-of-tricks/components-raw/';
 var components = [
   'footer'
 ];
