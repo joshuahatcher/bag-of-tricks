@@ -7,17 +7,12 @@ var components = [
 
 function renderComponents(components) {
   if (!window.$) {
+    console.log('Couldn\'t load components:', 'Including components requires JQuery.');
     return;
   }
 
   components.forEach(function(name) {
-    var stylesheet = document.createElement('link');
-
-    stylesheet.rel = 'text/stylesheet';
-    stylesheet.href = componentPath + name + '/style.css';
-    $('body').prepend(stylesheet);
-
-    $('#' + name).load(componentPath + name + '/index.html');
+    $('[data-component="' + name + '"]').load(componentPath + name + '/index.html');
   });
 }
 
